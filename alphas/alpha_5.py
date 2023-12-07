@@ -15,4 +15,4 @@ def alpha_5(_open: pd.DataFrame(), _close: pd.DataFrame(), _returns: pd.DataFram
     profits = profit(alpha, _returns)
     all_alphas.append([alpha, profits])
     print("После добавления альфы_5:")
-    print(matrix(all_alphas))
+    print(table_result(all_alphas))

@@ -136,6 +136,10 @@ def alpha_SMB(close, delta, n):
         profit[close.columns[i + 1]] = close[close.columns[i + 1]] / close[close.columns[i]] - 1
     profit.index = close.index
 
+    # Если доходность принадлежит к верхнему квантилю, присваивается положительное значение.
+    # Если доходность принадлежит к нижнему квантилю, присваивается отрицательное значение.
+    # В противном случае, присваивается 0
+
     for i in range(len(profit.columns) - delta):
         alpha[profit.columns[i + delta]] = np.where(
             profit[profit.columns[i]] <= profit[profit.columns[i]].sort_values()[num],

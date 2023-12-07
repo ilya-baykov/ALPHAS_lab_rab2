@@ -16,4 +16,4 @@ def alpha_1(_close: pd.DataFrame(), _returns: pd.DataFrame()) -> None:
     profits = profit(alpha, _returns)
     all_alphas.append([alpha, profits])
     print("После добавления альфы_1:")
-    print(matrix(all_alphas))
+    print(table_result(all_alphas))

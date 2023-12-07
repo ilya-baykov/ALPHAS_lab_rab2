@@ -158,7 +158,7 @@ def sharpe_per_year(alpha, profits):
     return year_sharpes
 
 
-def matrix(alpha: list) -> pd.DataFrame:
+def table_result(alpha: list) -> pd.DataFrame:
     pnl = pd.DataFrame()
     pnl_sum = []
     mean_turnover = []
